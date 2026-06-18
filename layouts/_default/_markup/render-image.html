@@ -1,5 +1,5 @@
 {{- $src := .Destination -}}
 {{- if hasPrefix $src "/" -}}
-  {{- $src = $src | relURL -}}
+  {{- $src = partial "asset-url.html" (strings.TrimPrefix "/" $src) -}}
 {{- end -}}
 <img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{- with .Title }} title="{{ . }}"{{- end }} loading="lazy">

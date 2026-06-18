@@ -1,5 +1,5 @@
 {{- $url := .Destination -}}
 {{- if hasPrefix $url "/" -}}
-  {{- $url = $url | relURL -}}
+  {{- $url = partial "asset-url.html" (strings.TrimPrefix "/" $url) -}}
 {{- end -}}
 <a href="{{ $url | safeURL }}"{{- with .Title }} title="{{ . }}"{{- end }}{{- if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{- end }}>{{ .Text | safeHTML }}</a>

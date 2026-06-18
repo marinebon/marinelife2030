@@ -1,0 +1,7 @@
+{{- /*
+  Usage: {{ partial "asset-url.html" "images/foo.png" }}
+  Resolves static asset paths against site.BaseURL (works in subdirectories).
+*/ -}}
+{{- $path := . -}}
+{{- $path = strings.TrimPrefix "/" $path -}}
+{{- return (urls.JoinPath site.BaseURL $path) -}}

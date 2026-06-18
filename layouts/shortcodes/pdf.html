@@ -1,4 +1,6 @@
-{{- $src := .Get "src" | default (.Get 0) | relURL -}}
+{{- $path := .Get "src" | default (.Get 0) -}}
+{{- $path = strings.TrimPrefix "/" $path -}}
+{{- $src := partial "asset-url.html" $path -}}
 {{- $title := .Get "title" | default "PDF document" -}}
 <div class="pdf-embed">
   <iframe

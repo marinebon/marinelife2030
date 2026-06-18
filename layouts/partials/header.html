@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="{{ "/" | relURL }}">
-      <img src="{{ "/images/ML2030_LogoColor300ppi.png" | relURL }}" alt="{{ .Site.Title }}" width="180" height="150">
+    <a class="logo" href="{{ site.BaseURL }}">
+      <img src="{{ partial "asset-url.html" "images/ML2030_LogoColor300ppi.png" }}" alt="{{ .Site.Title }}" width="180" height="150">
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -19,7 +19,7 @@
           <ul class="nav-dropdown">
             {{ range .Children }}
             <li>
-              <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq $.RelPermalink (.URL | relURL)) }} class="active"{{ end }}>{{ .Name }}</a>
+              <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active"{{ end }}>{{ .Name }}</a>
             </li>
             {{ end }}
           </ul>

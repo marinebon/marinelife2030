@@ -1,6 +1,6 @@
 <div class="partner-logos">
   {{ range site.Data.partner_logos }}
-  {{ $src := .src | relURL }}
+  {{ $src := partial "asset-url.html" (strings.TrimPrefix "/" .src) }}
   {{ if .url }}
   <a class="partner-logo" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}">
     <img src="{{ $src }}" alt="{{ .name }}" loading="lazy">

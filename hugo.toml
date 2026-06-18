@@ -1,7 +1,6 @@
 baseURL = "https://marinelife2030.org/"
 languageCode = "en-us"
 title = "Marine Life 2030"
-canonifyURLs = true
 
 [pagination]
   pagerSize = 10
