@@ -12,7 +12,7 @@ Marine Life 2030 is a program endorsed by the United Nations Decade of Ocean Sci
 
 Want to learn more about ML2030? Check out this recording from the AIR Centre hosted "[Marine Biodiversity Networking Fridays.](https://www.aircentre.org/netfridays-marine-biodiversity-01/)" This session, MBON and the organization of a global community for the Ocean Decade: Priorities, benefits, and co-design strategies, engaged participants from 57 countries in the design of the Marine Life 2030 Ocean Decade program, including a request to contribute to the leadership of themes and tasks.
 
-{{< youtube j8-V9t11-OY "Marine Biodiversity Networking Fridays — Marine Life 2030" >}}
+{{< youtube id="j8-V9t11-OY" title="Marine Biodiversity Networking Fridays — Marine Life 2030" >}}
 
 ## Our Partners
 
