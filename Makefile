@@ -1,10 +1,18 @@
-.PHONY: build serve images content
+.PHONY: build serve images content build-marinebon
+
+BASE_URL ?=
 
 build:
-	hugo --minify
+	hugo --minify $(if $(BASE_URL),--baseURL "$(BASE_URL)",)
+
+build-marinebon:
+	hugo --minify --baseURL "https://marinebon.org/marinelife2030/"
 
 serve:
-	hugo server -D
+	hugo server -D $(if $(BASE_URL),--baseURL "$(BASE_URL)",)
+
+serve-marinebon:
+	hugo server -D --baseURL "http://localhost:1313/marinelife2030/"
 
 images:
 	python3 scripts/download_images.py

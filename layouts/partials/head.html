@@ -8,4 +8,4 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-<link rel="icon" href="/images/ML2030_LogoColor300ppi.png">
+<link rel="icon" href="{{ "/images/ML2030_LogoColor300ppi.png" | relURL }}">

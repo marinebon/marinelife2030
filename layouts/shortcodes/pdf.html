@@ -1,4 +1,4 @@
-{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $src := .Get "src" | default (.Get 0) | relURL -}}
 {{- $title := .Get "title" | default "PDF document" -}}
 <div class="pdf-embed">
   <iframe

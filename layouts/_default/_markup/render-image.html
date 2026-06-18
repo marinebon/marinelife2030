@@ -1,0 +1,5 @@
+{{- $src := .Destination -}}
+{{- if hasPrefix $src "/" -}}
+  {{- $src = $src | relURL -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{- with .Title }} title="{{ . }}"{{- end }} loading="lazy">
