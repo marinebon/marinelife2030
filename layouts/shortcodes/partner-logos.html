@@ -1,0 +1,13 @@
+<div class="partner-logos">
+  {{ range site.Data.partner_logos }}
+  {{ if .url }}
+  <a class="partner-logo" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}">
+    <img src="{{ .src }}" alt="{{ .name }}" loading="lazy">
+  </a>
+  {{ else }}
+  <div class="partner-logo" title="{{ .name }}">
+    <img src="{{ .src }}" alt="{{ .name }}" loading="lazy">
+  </div>
+  {{ end }}
+  {{ end }}
+</div>

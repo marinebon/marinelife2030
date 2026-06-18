@@ -214,6 +214,111 @@ a:hover { color: var(--color-teal); }
 
 .prose th { background: #f0f8fa; }
 
+/* Responsive video embeds */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto 2.5rem;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 65, 83, 0.15);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Partner logo grid (About page) */
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.5rem;
+  background: #f8fcfd;
+  border-radius: 8px;
+  border: 1px solid #e0eef2;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  padding: 0.5rem;
+  background: var(--color-white);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 65, 83, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+a.partner-logo {
+  text-decoration: none;
+}
+
+a.partner-logo:hover {
+  box-shadow: 0 4px 12px rgba(0, 65, 83, 0.15);
+  transform: translateY(-2px);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  display: block;
+}
+
+/* About page: compact partner lists in columns */
+.about-page .prose > ul {
+  columns: 2;
+  column-gap: 2rem;
+  margin: 0.5rem 0 2rem;
+  padding-left: 1.25rem;
+}
+
+.about-page .prose > h2 {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0eef2;
+}
+
+.about-page .prose > h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.about-page .prose > img:first-of-type {
+  max-height: 120px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .partner-logos {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .partner-logo { height: 70px; }
+
+  .about-page .prose > ul {
+    columns: 1;
+  }
+}
+
 /* News grid */
 .news-grid {
   display: grid;

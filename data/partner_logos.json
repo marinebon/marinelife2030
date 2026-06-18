@@ -1,0 +1,20 @@
+[
+  {"name": "GEO BON", "src": "/images/PartnerLogos_GEO-BON.jpg"},
+  {"name": "GOOS", "src": "/images/PartnerLogos_GOOS.jpg"},
+  {"name": "IABO", "src": "/images/PartnerLogos_IABO.jpg"},
+  {"name": "IOOS", "src": "/images/PartnerLogos_IOOS.jpg"},
+  {"name": "MarineGEO", "src": "/images/PartnerLogos_MarineGEO.jpg"},
+  {"name": "MBON", "src": "/images/PartnerLogos_MBON.jpg"},
+  {"name": "NASA", "src": "/images/PartnerLogos_NASA.jpg"},
+  {"name": "NOAA", "src": "/images/PartnerLogos_NOAA.jpg"},
+  {"name": "OBIS", "src": "/images/PartnerLogos_OBIS.jpg"},
+  {"name": "Ocean Best Practices", "src": "/images/PartnerLogos_OceanBestPractices.jpg"},
+  {"name": "POGO", "src": "/images/PartnerLogos_POGO.jpg"},
+  {"name": "Smithsonian", "src": "/images/PartnerLogos_Smithsonian.jpg"},
+  {"name": "UN WCMC", "src": "/images/PartnerLogos_UN-WCMC.jpg"},
+  {"name": "VLIZ", "src": "/images/PartnerLogos_VLIZ.jpg"},
+  {"name": "WoRMS", "src": "/images/PartnerLogos_WORMS.jpg", "url": "https://www.marinespecies.org/"},
+  {"name": "AIR Centre", "src": "/images/aircentre_logo.png"},
+  {"name": "BIMS", "src": "/images/BIMS_Wordmark.png"},
+  {"name": "Ocean KAN", "src": "/images/Ocean-KAN-logo-full-colour-good-for-print-and-online-white-background.jpg"}
+]
