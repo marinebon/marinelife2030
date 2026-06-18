@@ -9,9 +9,16 @@
       { "name": "Style Guide", "url": "/style-guide/", "external": false }
     ]
   },
-  { "name": "News", "url": "/news/", "external": false },
-  { "name": "Upcoming Events", "url": "/upcoming-events/", "external": false },
-  { "name": "Newsletters", "url": "/newsletters/", "external": false },
+  {
+    "name": "News",
+    "url": "/news/",
+    "external": false,
+    "children": [
+      { "name": "Newsroom", "url": "/news/", "external": false },
+      { "name": "Upcoming Events", "url": "/upcoming-events/", "external": false },
+      { "name": "Newsletters", "url": "/newsletters/", "external": false }
+    ]
+  },
   { "name": "Affiliated Projects", "url": "/affiliated-projects/", "external": false },
   { "name": "Join Us", "url": "/join-us/", "external": false }
 ]

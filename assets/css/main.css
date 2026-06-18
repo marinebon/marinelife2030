@@ -523,7 +523,8 @@ a.partner-logo:hover {
 }
 
 .nav-dropdown-toggle:hover,
-.has-dropdown.open .nav-dropdown-toggle {
+.has-dropdown.open .nav-dropdown-toggle,
+.has-dropdown:has(.nav-dropdown a.active) .nav-dropdown-toggle {
   background: var(--color-gold-light);
   color: var(--color-teal);
 }
