@@ -10,8 +10,4 @@ date: 2022-06-22
 
 ## Brand Colors
 
-| Color | Hex | RGB |
-|-------|-----|-----|
-| Pantone 7555 | `#D09E11` | R: 208 G: 157 B: 17 |
-| Pantone 3035 | `#004153` | R: 1 G: 62 B: 82 |
-| Pantone 631 | `#2CB6CE` | R: 6 G: 175 B: 196 |
+{{< brand-colors >}}

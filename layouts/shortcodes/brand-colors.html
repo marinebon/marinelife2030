@@ -1,0 +1,20 @@
+<div class="brand-colors">
+  {{ range site.Data.brand_colors }}
+  <div class="brand-color-card">
+    <div class="brand-color-swatch" style="background-color: {{ .hex }};" aria-hidden="true"></div>
+    <div class="brand-color-info">
+      <h3 class="brand-color-name">{{ .name }}</h3>
+      <dl class="brand-color-values">
+        <div>
+          <dt>Hex</dt>
+          <dd><code>{{ .hex }}</code></dd>
+        </div>
+        <div>
+          <dt>RGB</dt>
+          <dd><code>{{ .rgb }}</code></dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  {{ end }}
+</div>
