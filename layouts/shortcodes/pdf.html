@@ -1,0 +1,12 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $title := .Get "title" | default "PDF document" -}}
+<div class="pdf-embed">
+  <iframe
+    src="{{ $src }}"
+    title="{{ $title }}"
+    loading="lazy"
+  ></iframe>
+</div>
+<p class="pdf-download">
+  <a href="{{ $src }}" target="_blank" rel="noopener">Download {{ $title }} (PDF)</a>
+</p>
