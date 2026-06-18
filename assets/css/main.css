@@ -51,7 +51,7 @@ a:hover { color: var(--color-teal); }
 
 .logo img { display: block; height: 60px; width: auto; }
 
-.main-nav ul {
+.main-nav > ul {
   display: flex;
   gap: 0.25rem;
   list-style: none;
@@ -399,6 +399,115 @@ a.partner-logo:hover {
   margin: 0;
 }
 
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Nav dropdown */
+.has-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: none;
+  color: var(--color-teal);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-dropdown-toggle:hover,
+.has-dropdown.open .nav-dropdown-toggle {
+  background: var(--color-gold-light);
+  color: var(--color-teal);
+}
+
+.nav-chevron {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.2s ease;
+}
+
+.has-dropdown.open .nav-chevron {
+  transform: rotate(180deg);
+}
+
+.main-nav .nav-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  background: var(--color-white);
+  border: 1px solid #e0eef2;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 65, 83, 0.12);
+  z-index: 200;
+}
+
+/* Invisible bridge so hover isn't lost crossing trigger → menu */
+@media (hover: hover) and (min-width: 769px) {
+  .main-nav .nav-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    height: 4px;
+  }
+}
+
+.has-dropdown.open > .nav-dropdown {
+  display: block;
+}
+
+@media (hover: hover) and (min-width: 769px) {
+  .has-dropdown:hover > .nav-dropdown {
+    display: block;
+  }
+
+  .has-dropdown:hover .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .has-dropdown:hover .nav-dropdown-toggle {
+    background: var(--color-gold-light);
+  }
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--color-teal);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-dropdown a:hover,
+.nav-dropdown a.active {
+  background: var(--color-gold-light);
+  color: var(--color-teal);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
@@ -416,7 +525,23 @@ a.partner-logo:hover {
 
   .main-nav.open { display: block; }
 
-  .main-nav ul { flex-direction: column; }
+  .main-nav > ul { flex-direction: column; }
 
   .header-inner { position: relative; }
+
+  .has-dropdown { width: 100%; }
+
+  .nav-dropdown-toggle { width: 100%; justify-content: space-between; }
+
+  .main-nav .nav-dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 0 1rem;
+    margin: 0;
+    background: transparent;
+  }
+
+  .has-dropdown.open > .nav-dropdown { display: block; }
 }

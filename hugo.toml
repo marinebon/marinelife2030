@@ -28,7 +28,17 @@ title = "Marine Life 2030"
     weight = 1
   [[menu.main]]
     name = "About"
+    identifier = "about"
+    weight = 2
+  [[menu.main]]
+    name = "Ocean Decade Proposal"
+    parent = "about"
     url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Style Guide"
+    parent = "about"
+    url = "/style-guide/"
     weight = 2
   [[menu.main]]
     name = "News"

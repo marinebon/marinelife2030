@@ -1,37 +1,17 @@
 [
-  {
-    "name": "Home",
-    "url": "/",
-    "external": false
-  },
+  { "name": "Home", "url": "/", "external": false },
   {
     "name": "About",
-    "url": "/about",
-    "external": false
+    "url": "/about/",
+    "external": false,
+    "children": [
+      { "name": "Ocean Decade Proposal", "url": "/about/", "external": false },
+      { "name": "Style Guide", "url": "/style-guide/", "external": false }
+    ]
   },
-  {
-    "name": "News",
-    "url": "/news",
-    "external": false
-  },
-  {
-    "name": "Upcoming Events",
-    "url": "/upcoming-events",
-    "external": false
-  },
-  {
-    "name": "Newsletters",
-    "url": "/newsletters",
-    "external": false
-  },
-  {
-    "name": "Affiliated Projects",
-    "url": "/affiliated-projects",
-    "external": false
-  },
-  {
-    "name": "Join Us",
-    "url": "/join-us",
-    "external": false
-  }
+  { "name": "News", "url": "/news/", "external": false },
+  { "name": "Upcoming Events", "url": "/upcoming-events/", "external": false },
+  { "name": "Newsletters", "url": "/newsletters/", "external": false },
+  { "name": "Affiliated Projects", "url": "/affiliated-projects/", "external": false },
+  { "name": "Join Us", "url": "/join-us/", "external": false }
 ]

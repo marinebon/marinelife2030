@@ -20,4 +20,27 @@
     const open = nav.classList.toggle('open');
     this.setAttribute('aria-expanded', open);
   });
+
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const parent = this.closest('.has-dropdown');
+      const isOpen = parent.classList.contains('open');
+      document.querySelectorAll('.has-dropdown.open').forEach(function (el) {
+        if (el !== parent) {
+          el.classList.remove('open');
+          el.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      parent.classList.toggle('open', !isOpen);
+      this.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.has-dropdown.open').forEach(function (el) {
+      el.classList.remove('open');
+      el.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
