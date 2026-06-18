@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="/images/UNDecadeLogo_White_300w.png" alt="UN Ocean Decade" width="150">
+      <p>Marine Life 2030 is a UN Ocean Decade Endorsed Programme that seeks to transform the observation and forecasting of marine life for the future for the benefit of all people.</p>
+    </div>
+    <div class="footer-social">
+      {{ with .Site.Params.twitter }}<a href="{{ . }}" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>{{ end }}
+      {{ with .Site.Params.instagram }}<a href="{{ . }}" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>{{ end }}
+      {{ with .Site.Params.youtube }}<a href="{{ . }}" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>{{ end }}
+      {{ with .Site.Params.linkedin }}<a href="{{ . }}" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      {{ with .Site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+    </div>
+    <p class="footer-copy">&copy; {{ now.Year }} Marine Life 2030. All Rights Reserved.</p>
+  </div>
+</footer>
+<script>
+  document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+    const nav = document.querySelector('.main-nav');
+    const open = nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+  });
+</script>

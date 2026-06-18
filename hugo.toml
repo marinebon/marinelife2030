@@ -1,0 +1,52 @@
+baseURL = "https://marinelife2030.org/"
+languageCode = "en-us"
+title = "Marine Life 2030"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "Building global knowledge of marine life for local action"
+  email = "marinelife2030@gmail.com"
+  twitter = "https://twitter.com/marinelife2030"
+  instagram = "https://instagram.com/marinelife_2030"
+  youtube = "https://www.youtube.com/channel/UC5oYhg2Ay9bn87Wn4DWyTtA/featured"
+  linkedin = "https://www.linkedin.com/in/marine-life-b87a68226/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 3
+  [[menu.main]]
+    name = "Upcoming Events"
+    url = "/upcoming-events/"
+    weight = 4
+  [[menu.main]]
+    name = "Newsletters"
+    url = "/newsletters/"
+    weight = 5
+  [[menu.main]]
+    name = "Affiliated Projects"
+    url = "/affiliated-projects/"
+    weight = 6
+  [[menu.main]]
+    name = "Join Us"
+    url = "/join-us/"
+    weight = 7

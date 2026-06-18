@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-content container">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "news" }}
+    <p class="section-label">News</p>
+    {{ end }}
+  </header>
+
+  {{ if and (eq .Section "news") (eq .Kind "section") }}
+  <div class="news-grid">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="news-card">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Date }}
+      <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+      {{ end }}
+      {{ with .Params.author }}<span class="author">{{ . }}</span>{{ end }}
+      <p>{{ .Description | default (.Summary | plainify) }}</p>
+      <a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ end }}
+</section>
+{{ end }}

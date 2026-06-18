@@ -1,0 +1,8 @@
+/public/
+/resources/
+.hugo_build.lock
+_scrape/*.html
+_scrape/live_home.html
+__pycache__/
+*.pyc
+.DS_Store
