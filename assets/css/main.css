@@ -378,6 +378,14 @@ a.partner-logo:hover {
   display: block;
 }
 
+/* About page: background image */
+.about-page {
+  background-image: url('/images/ML2030_CritterBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* About page: compact partner lists in columns */
 .about-page .prose > ul {
   columns: 2;
